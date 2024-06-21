@@ -6,7 +6,7 @@ import { FaUserCircle } from "react-icons/fa";
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [showMenu, setShowMenu] = useState(false);
+    const [showMenu, setShowMenu] = useState(true);
     return (
         <nav>            
             <Link to = '/'>
@@ -83,34 +83,38 @@ const Header = () => {
                                                
                     </Link>    
                 </li>  
-                <li>
-                    <Link
-                        className={style.user_icon}
-                        onClick={() => {
-                            setShowMenu(!showMenu) 
-                        }}
-                    >
-                        <FaUserCircle />
-                    </Link> 
-                    <div className={showMenu ? `${style.user_menu}` : '' }>
-                        <Link 
-                            to = '/login'
+                <li>                    
+                    <Link>
+                        <FaUserCircle 
+                            className={style.user_icon}
                             onClick={() => {
                                 setShowMenu(!showMenu) 
                             }}
-                        >
-                            Login                       
-                        </Link>
-                        <Link 
-                            to = '/register'
-                            onClick={() => {
-                                setShowMenu(!showMenu) 
-                            }}
-                        >
-                            Register                       
-                        </Link>
-                    </div>                       
-                </li>                        
+                        />
+                        <div className={showMenu ? `${style.user_menu}` : `${style.user_menu_open}` }>
+                            <div>
+                                <Link 
+                                    to = '/login'    
+                                    onClick={() => {
+                                        setShowMenu(!showMenu) 
+                                    }}
+                                >
+                                    Login
+                                </Link>
+                            </div>
+                            <div>
+                                <Link 
+                                    to = '/signup'
+                                    onClick={() => {
+                                        setShowMenu(!showMenu) 
+                                    }}
+                                >
+                                    Signup
+                                </Link>    
+                            </div>
+                        </div>
+                    </Link>               
+                </li>                                       
             </ul>
         </nav>
     )

@@ -33,12 +33,14 @@ nav a{
 }
 .logo{
     font-size: 40px;
+    font-weight: 800;
     color: var(--red);
 }
 .brand{
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    font-weight: 600;
 }
 nav ul{
     display: flex;
@@ -102,36 +104,38 @@ nav .menu span{
     color: var(--Background1);
 }
 .user_icon{
-    font-size: 25px;
+    font-size: 23px;
 }
-.user_menu{
-    width: 8%;
-    position: absolute;
-    display: none;
-    flex-direction: column;
-    border-radius: 5px;
-    background-color: red;
-    top: 5rem;
-    right: 4rem;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+.user_menu{ 
+    display: none;    
 }
-.user_menu a{
+.user_menu_open{
+    width: 7%;
+    box-sizing: border-box;
     display: flex;
-    padding: 0.6rem;
-    justify-content: end;
-    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    right: 4rem;
+    top: 4.9rem;   
+    background-color: var(--BgFontColor2);
+}
+
+.user_menu_open a{
+    display: flex;
+    justify-content: center;
     font-size: 16px;
-    color: var(--Background1);
-    border-bottom: 1px solid var(--Background3);
+    padding: 0.5rem 1rem;
+    color: var(--Background1); 
+    border: 1px solid var(--Background3);
+    border-top: none;
 }
-.user_menu a:hover{    
-    background-color: var(--BgFontColor);
-    color: var(--Background1);
-    border-radius: 5px;
-    border-bottom: none;
+.user_menu_open a:hover{    
+    background-color: var(--Background3); 
 }
+
+
 @media only screen and (max-width: 480px){
-    a[class='active']{
+    nav > a[class='active']{
         width: 0%;
         color: var(--BgFontColor); 
     }     
@@ -147,7 +151,7 @@ nav .menu span{
         align-items: start;
         background: linear-gradient(to right, var(--Background1), var(--Background1), var(--Background1));
     } 
-    nav ul{
+    nav > ul{
         display: none;
         flex-direction: column;
         align-items: center;
@@ -157,7 +161,7 @@ nav .menu span{
         padding:0rem;
         margin-bottom: 1.5rem;
     }
-    nav ul.open{
+    nav > ul.open{
         display: flex; 
         gap: 1.5rem;
     } 

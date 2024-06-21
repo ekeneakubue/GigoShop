@@ -21,7 +21,7 @@ function App() {
         <Route path = '/contacts' element = { <Contacts /> } />
         <Route path = '/cart' element = { <Cart /> } />
         <Route path = '/login' element = { <Login /> } />
-        <Route path = '/register' element = { <Register /> } />
+        <Route path = '/signup' element = { <Register /> } />
       </Routes>
     </BrowserRouter>
   )

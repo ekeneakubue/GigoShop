@@ -1,0 +1,14 @@
+:root{
+    --Background1: #000;
+    --Background2: #353434;
+    --Background3: #4e4e4e;
+    --BgFontColor: #fff;
+    --BgFontColor3: #fcf9f9;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: var(--BgFontColor2);
+    font-family: "Inter", sans-serif;
+}
